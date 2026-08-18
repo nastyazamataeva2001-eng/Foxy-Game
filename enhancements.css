@@ -1,0 +1,66 @@
+/* Project-specific Foxy asset and separate listening controls. */
+.foxy { display: none; }
+.foxy-wrap::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.18;
+  background: url("assets/foxy-transparent.png") center / contain no-repeat;
+  filter: drop-shadow(0 16px 12px #6e579133);
+}
+.happy::before { animation: happy .45s ease-in-out 3; }
+.thinking::before { animation: tilt .7s alternate infinite; }
+.listening::before { animation: talk .22s alternate infinite; }
+.celebration::before { animation: happy .5s ease-in-out infinite; }
+
+.answer-card { padding: 6px 8px 6px 17px; }
+.answer-choice {
+  flex: 1;
+  min-height: 52px;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  text-align: left;
+}
+.match-choice {
+  flex: 1;
+  min-height: 46px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  text-align: left;
+}
+.mini-listen {
+  min-width: 40px;
+  height: 40px;
+  transition: .18s;
+}
+.mini-listen:hover { background: #ded2ff; transform: scale(1.08); }
+.mini-listen:active { transform: scale(.94); }
+
+.character-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: -12px 0 18px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff4bf, #e7f9ee);
+}
+.character-card img {
+  width: 104px;
+  height: 116px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.character-card p { margin: 0; font-weight: 900; font-size: 1.2rem; }
+@media (max-width: 680px) {
+  .character-card { margin-top: -4px; padding: 6px 12px; }
+  .character-card img { width: 76px; height: 86px; }
+}

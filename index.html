@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7b5ce1" />
+    <title>Foxy English Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="enhancements.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn sound off" title="Sound on">🔊</button>
+
+      <section id="startScreen" class="screen start-screen">
+        <div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">A tiny English adventure</p>
+          <h1>Foxy English</h1>
+          <p class="subtitle">Let’s learn English!</p>
+          <button id="startButton" class="primary-button" type="button">START <span>→</span></button>
+          <button id="soundCheck" class="listen-button" type="button" aria-label="Test sound">🔊 Test the sound</button>
+        </div>
+        <div class="foxy-wrap hero-foxy" id="startFoxy" aria-label="Foxy the friendly fox">
+          <div class="sparkle s1">✦</div><div class="sparkle s2">✦</div>
+          <div class="foxy">
+            <div class="ear left-ear"></div><div class="ear right-ear"></div><div class="head"><span class="eye left-eye"></span><span class="eye right-eye"></span><span class="muzzle"></span><span class="nose"></span><span class="smile"></span><span class="cheek left-cheek"></span><span class="cheek right-cheek"></span></div>
+            <div class="body"><span class="belly"></span><span class="paw left-paw"></span><span class="paw right-paw"></span><span class="tail"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen game-screen hidden">
+        <header class="game-header"><button id="homeButton" class="icon-button" type="button" aria-label="Back to start">⌂</button><div><p id="questionCount" class="question-count">Question 1 of 5</p><div id="progressDots" class="progress-dots" aria-label="Game progress"></div></div></header>
+        <div class="game-layout">
+          <aside class="foxy-panel"><div class="foxy-wrap game-foxy" id="gameFoxy"><div class="foxy"><div class="ear left-ear"></div><div class="ear right-ear"></div><div class="head"><span class="eye left-eye"></span><span class="eye right-eye"></span><span class="muzzle"></span><span class="nose"></span><span class="smile"></span><span class="cheek left-cheek"></span><span class="cheek right-cheek"></span></div><div class="body"><span class="belly"></span><span class="paw left-paw"></span><span class="paw right-paw"></span><span class="tail"></span></div></div></div><p id="foxyMessage">Hi, friend!</p></aside>
+          <section id="questionArea" class="question-area"></section>
+        </div>
+      </section>
+
+      <section id="finalScreen" class="screen final-screen hidden">
+        <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="eyebrow">You are amazing!</p><h2>🎉 Great job!</h2><p class="final-lead">You did it!</p><p>Foxy is proud of you!</p>
+        <div class="foxy-wrap celebration-foxy" id="finalFoxy"><div class="foxy"><div class="ear left-ear"></div><div class="ear right-ear"></div><div class="head"><span class="eye left-eye"></span><span class="eye right-eye"></span><span class="muzzle"></span><span class="nose"></span><span class="smile"></span><span class="cheek left-cheek"></span><span class="cheek right-cheek"></span></div><div class="body"><span class="belly"></span><span class="paw left-paw"></span><span class="paw right-paw"></span><span class="tail"></span></div></div></div>
+        <button id="playAgain" class="primary-button" type="button">PLAY AGAIN <span>↻</span></button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
